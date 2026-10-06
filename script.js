@@ -12,5 +12,3 @@ siteNav?.querySelectorAll('a').forEach((link) => {
     menuButton?.setAttribute('aria-expanded', 'false');
   });
 });
-
-document.querySelector('#year').textContent = new Date().getFullYear();
