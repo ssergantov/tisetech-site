@@ -41,15 +41,15 @@ a { color: inherit; }
 .menu-button { display: none; border: 0; background: transparent; font: inherit; font-weight: 700; }
 
 .hero {
-  min-height: calc(100vh - 76px);
+  height: clamp(650px, calc(100vh - 76px), 760px);
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
   max-width: 1600px;
   margin: 0 auto;
   border-bottom: 1px solid var(--line);
 }
 .hero-copy {
-  padding: clamp(72px, 9vw, 140px) clamp(30px, 5vw, 80px) 72px clamp(24px, 5vw, 80px);
+  padding: clamp(54px, 5vw, 86px) clamp(30px, 5vw, 80px) 54px clamp(24px, 5vw, 80px);
   min-width: 0;
 }
 .eyebrow { margin: 0 0 28px; color: var(--orange); font-size: 13px; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
@@ -62,7 +62,7 @@ h1 { max-width: 850px; margin-bottom: 30px; font-size: clamp(46px, 4.9vw, 66px);
 .button-primary:hover, .button-primary:focus-visible { background: var(--ink); }
 .text-link { font-weight: 750; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
 .hero-visual { position: relative; overflow: hidden; background: #b8b8b8; }
-.hero-visual img { width: 178%; height: 100%; object-fit: cover; object-position: right center; filter: grayscale(1) contrast(1.08); transform: translateX(-31%); }
+.hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; filter: grayscale(1) contrast(1.08); }
 .hero-visual::after { content: ""; position: absolute; inset: 0; border-left: 8px solid var(--orange); pointer-events: none; }
 .visual-label { position: absolute; right: 32px; bottom: 34px; padding: 14px 16px; color: white; background: var(--navy); font-size: 13px; font-weight: 750; line-height: 1.4; letter-spacing: 0.05em; text-transform: uppercase; }
 
@@ -110,7 +110,7 @@ h2 { margin-bottom: 0; font-size: clamp(38px, 4.6vw, 66px); line-height: 1.01; l
 .site-footer > div { font-size: 19px; font-weight: 800; }
 
 @media (max-width: 920px) {
-  .hero { grid-template-columns: 1fr; }
+  .hero { height: auto; grid-template-columns: 1fr; }
   .hero-visual { min-height: 420px; }
   .hero-copy { padding-right: 24px; }
   .section-heading, .approach-section, .delivery-section { grid-template-columns: 1fr; }
